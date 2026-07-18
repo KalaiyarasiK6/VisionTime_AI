@@ -2,6 +2,7 @@
 HackZen 2026
 
 Team - ProX
+AI Powered Human Activity Timeline Generator
 
 An AI-powered real-time surveillance system that detects suspicious activities using YOLO and ByteTrack while providing a timeline of important events.
 
@@ -91,11 +92,9 @@ python app.py
 
 ## 🎯 Future Enhancements
 
-- Face Recognition
 - Email Alerts
 - Mobile Notifications
 - Cloud Storage
-- Analytics Dashboard
 
 ---
 
