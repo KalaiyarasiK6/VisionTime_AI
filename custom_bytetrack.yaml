@@ -1,0 +1,18 @@
+# custom_bytetrack.yaml
+# Tuned ByteTrack config for VisionTime AI to reduce ID switches when a
+# person is briefly occluded (e.g. walking behind a shelf/counter) or
+# partially leaves frame. Compared to Ultralytics' stock bytetrack.yaml:
+#   - track_buffer raised 30 -> 90   (holds a lost track's identity ~3x longer
+#                                      before giving up and starting a new ID)
+#   - new_track_thresh raised 0.6 -> 0.75 (stricter about spawning a brand
+#                                      new ID, favors re-matching an existing one)
+#   - match_thresh raised 0.8 -> 0.85 (slightly stricter re-association,
+#                                      reduces false merges between different people)
+
+tracker_type: bytetrack
+track_high_thresh: 0.5
+track_low_thresh: 0.1
+new_track_thresh: 0.75
+track_buffer: 90
+match_thresh: 0.85
+fuse_score: true
